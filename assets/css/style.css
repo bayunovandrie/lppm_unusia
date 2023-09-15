@@ -1,157 +1,165 @@
 .menu-link {
-    display: block;
-    padding: 1.4rem;
-    color: black;
-    text-decoration: none;
-    text-align: left;
+  display: block;
+  padding: 1.4rem;
+  color: black;
+  text-decoration: none;
+  text-align: left;
 }
 
-        /* Efek hover pada tautan dengan class "nav-link" */
-        .menu-link:hover {
-            color: green; /* Warna teks saat dihover */
-        }
+      /* Efek hover pada tautan dengan class "nav-link" */
+      .menu-link:hover {
+          color: green; /* Warna teks saat dihover */
+      }
 
-        /* Gaya aktif (current) pada tautan dengan class "menu-link" */
-        .menu-link.active {
-            color: #fff; /* Warna teks saat tautan aktif (current) */
-            background-color: #007bff; /* Warna latar belakang saat tautan aktif (current) */
-            border-radius: 0.25rem; /* Gaya sudut elemen saat tautan aktif (current) */
-        }
+      /* Gaya aktif (current) pada tautan dengan class "menu-link" */
+      .menu-link.active {
+          color: #fff; /* Warna teks saat tautan aktif (current) */
+          background-color: #007bff; /* Warna latar belakang saat tautan aktif (current) */
+          border-radius: 0.25rem; /* Gaya sudut elemen saat tautan aktif (current) */
+      }
 
+    
 /* Gaya default untuk elemen dengan class "dropdown-item" */
 .menu-item {
-    display: block;
-    width: 100%;
-    padding: 0.25rem 1.5rem;
-    clear: both;
-    font-weight: 400;
-    color: #212529;
-    text-align: inherit;
-    white-space: nowrap;
-    background-color: transparent;
-    border: 0;
+  display: inline-block;
+  width: 100%;
+  padding: 0.25rem 1.5rem;
+  clear: both;
+  font-weight: 400;
+  color: #212529;
+  text-align: inherit;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0;
 }
-
 /* Efek hover pada elemen dengan class "menu-item" */
 .menu-item:hover {
-    color: green; /* Ganti dengan warna teks yang diinginkan saat dihover */
-    text-decoration: none;
+color: green; /* Ganti dengan warna teks yang diinginkan saat dihover */
+text-decoration: none;
 }
 
 /* Gaya saat elemen dengan class "menu-item" aktif (ditekan) */
 .menu-item.active, .menu-item:active {
-    color: #fff; /* Ganti dengan warna teks yang diinginkan saat aktif */
-    background-color: #007bff; /* Ganti dengan warna latar belakang yang diinginkan saat aktif */
-    text-decoration: none;
+color: #fff; /* Ganti dengan warna teks yang diinginkan saat aktif */
+background-color: #007bff; /* Ganti dengan warna latar belakang yang diinginkan saat aktif */
+text-decoration: none;
 }
 
 /* Gaya saat elemen dengan class "menu-item" dalam status non-aktif (disabled) */
 .menu-item.disabled, .menu-item:disabled {
-    color: #6c757d; /* Ganti dengan warna teks yang diinginkan saat non-aktif */
-    background-color: transparent;
+color: #6c757d; /* Ganti dengan warna teks yang diinginkan saat non-aktif */
+background-color: transparent;
+}
+
+@media (max-width: 768px) {
+.menu-item {
+    
+    font-size: 14px; /* Atur ukuran font yang sesuai */
+    padding: 0.25rem 0.5rem; /* Sesuaikan padding sesuai kebutuhan Anda */
+}
 }
 
 
 .card {
-        border-radius: 50px; /* Atur radius sesuai keinginan untuk efek rounded-circle */
-        box-shadow: 0px 2px 20px rgba(255, 255, 255, 0.1); /* Atur nilai shadow sesuai keinginan */
-    }
+      border-radius: 50px; /* Atur radius sesuai keinginan untuk efek rounded-circle */
+      box-shadow: 0px 2px 20px rgba(255, 255, 255, 0.1); /* Atur nilai shadow sesuai keinginan */
+  }
 .rounded-card {
-        
-        transition: transform 0.2s; /* Efek transisi untuk animasi */ /* Atur nilai shadow sesuai keinginan */
-    }
- /* Mengubah tampilan saat elemen dihover */
+      
+      transition: transform 0.2s; /* Efek transisi untuk animasi */ /* Atur nilai shadow sesuai keinginan */
+  }
+/* Mengubah tampilan saat elemen dihover */
 /* Tampilan elemen saat dihover */
 .footer-menu-link {
-    display: inline-block;
-    position: relative;
-    transition: transform 0.2s;
-    padding-left: 10px;
-    color: black;
+  display: inline-block;
+  position: relative;
+  transition: transform 0.2s;
+  padding-left: 10px;
+  color: black;
 }
 
 /* Menambahkan garis strip tanda -- di samping teks */
 .footer-menu-link::before { /* Teks yang akan ditampilkan sebagai garis strip */
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    opacity: 0;
-    transition: opacity 0.2s;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 0.2s;
 }
 
 /* Efek saat dihover */
 .footer-menu-link:hover{
-    transform: translateX(5px);
-    color: white;
+  transform: translateX(5px);
+  color: white;
 }
 
 /* Efek saat dihover, menampilkan garis strip */
 .footer-menu-link:hover::before {
-    opacity: 1;
+  opacity: 1;
 }
 
 .lppm {
-    color: #bad1c6;
+  color: #bad1c6;
 }
 .col-lg-12 img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .col-md-6 {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Mengatur judul menjadi di tengah horisontal */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Mengatur judul menjadi di tengah horisontal */
 }
 .hero-home {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .section-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
 }
 #gambar-container {
-    margin-top: 100px;
-    height: 700px;
-    background-color: green;
-    background-image: url('http://localhost/CI3/assets/images/pengabdian/pengabdian-3.jpg');
-    background-repeat: no-repeat;
-    background-size: 100% 700px;
-  }
-  /*#ganti-gambar {
-    position: absolute;
-    left: 20px; /* Sesuaikan jarak dari kiri */
-    bottom: 150px;
-    font-size: 50px;
-    color: brown; /* Sesuaikan jarak dari bawah */
-  }*/
-  #ganti-gambar-kanan {
-    position: absolute;
-    right: 20px; /* Sesuaikan jarak dari kiri */
-    bottom: 150px;
-    font-size: 50px;
-    color: brown; /* Sesuaikan jarak dari bawah */
-  }
+  margin-top: 100px;
+  height: 700px;
+  background-color: green;
+  background-image: url('http://localhost/CI3/assets/images/pengabdian/pengabdian-3.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 700px;
+}
+/*#ganti-gambar {
+  position: absolute;
+  left: 20px; /* Sesuaikan jarak dari kiri */
+  bottom: 150px;
+  font-size: 50px;
+  color: brown; /* Sesuaikan jarak dari bawah */
+}*/
+#ganti-gambar-kanan {
+  position: absolute;
+  right: 20px; /* Sesuaikan jarak dari kiri */
+  bottom: 150px;
+  font-size: 50px;
+  color: brown; /* Sesuaikan jarak dari bawah */
+}
 
 @keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    display: none;
-  }
+0% {
+  opacity: 1;
+}
+100% {
+  opacity: 0;
+  display: none;
+}
 }
 
 
@@ -160,143 +168,143 @@
 /*AWAL CARD STYLE*/
 
 .card-gambar {
-    background-color: whitesmoke;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 0.25rem;
-    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
-    padding: 1rem;
-    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
-    transform: translateX(0);
-    max-width: 500px;
-    width: 100%;
-    position: relative;
-    top: 250px;
-    right: -700px;
-    overflow: hidden;
-    opacity: 0.8;
+  background-color: whitesmoke;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.25rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  padding: 1rem;
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+  transform: translateX(0);
+  max-width: 500px;
+  width: 100%;
+  position: relative;
+  top: 250px;
+  right: -700px;
+  overflow: hidden;
+  opacity: 0.8;
 }
 
 @keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0.5;
-  }
+0% {
+  opacity: 0;
+}
+100% {
+  opacity: 0.5;
+}
 }
 
 .card-gambar{
-  opacity: 0;
-  animation: fadeIn 1s ease-in-out forwards;
-  animation-delay: 0.5s; /* Delay untuk animasi img */
+opacity: 0;
+animation: fadeIn 1s ease-in-out forwards;
+animation-delay: 0.5s; /* Delay untuk animasi img */
 }
 
 .card-gambar.active {
-  animation: none;
-  opacity: 0.6; /* Hentikan animasi setelah gambar muncul */
+animation: none;
+opacity: 0.6; /* Hentikan animasi setelah gambar muncul */
 }
 
 
 @keyframes slideInFromLeft {
-  0% {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
+0% {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+100% {
+  transform: translateX(0);
+  opacity: 1;
+}
 }
 
 .card-gambar h5 {
-  opacity: 0;
-  transform: translateX(-100%);
-  animation: slideInFromLeft 1s ease-in-out forwards;
-  animation-delay: 0.5s; /* Delay untuk animasi h5 */
+opacity: 0;
+transform: translateX(-100%);
+animation: slideInFromLeft 1s ease-in-out forwards;
+animation-delay: 0.5s; /* Delay untuk animasi h5 */
 }
 
 .card-gambar.active h5 {
-  opacity: 1;
-  transform: translateX(0);
-  animation: none; /* Hentikan animasi setelah muncul semua kata */
+opacity: 1;
+transform: translateX(0);
+animation: none; /* Hentikan animasi setelah muncul semua kata */
 }
 
 @keyframes slideInFromRight {
-  0% {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
+0% {
+  transform: translateX(100%);
+  opacity: 0;
+}
+100% {
+  transform: translateX(0);
+  opacity: 1;
+}
 }
 .card-gambar p {
-  opacity: 0;
-  transform: translateX(100%);
-  animation: slideInFromRight 1s ease-in-out forwards;
-  animation-delay: 1s; /* Delay untuk animasi p */
+opacity: 0;
+transform: translateX(100%);
+animation: slideInFromRight 1s ease-in-out forwards;
+animation-delay: 1s; /* Delay untuk animasi p */
 }
 
 .card-gambar.active p {
-  opacity: 1;
-  transform: translateX(0);
-  animation: none; /* Hentikan animasi setelah muncul semua teks */
+opacity: 1;
+transform: translateX(0);
+animation: none; /* Hentikan animasi setelah muncul semua teks */
 }
 
 /* Animasi muncul dari opacity 0 hingga 1 pada img */
 @keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+0% {
+  opacity: 0;
+}
+100% {
+  opacity: 1;
+}
 }
 /*
 .img-gambar{
-    text-align: right;
+  text-align: right;
 
 }*/
 
 .card-gambar img{
-  opacity: 0;
-  float: right;
-  animation: fadeIn 1s ease-in-out forwards;
-  animation-delay: 2s; /* Delay untuk animasi img */
+opacity: 0;
+float: right;
+animation: fadeIn 1s ease-in-out forwards;
+animation-delay: 2s; /* Delay untuk animasi img */
 }
 
 .card-gambar.active img {
-  opacity: 1;
-  animation: none; /* Hentikan animasi setelah gambar muncul */
+opacity: 1;
+animation: none; /* Hentikan animasi setelah gambar muncul */
 }
 
 /* Animasi menghilangkan tombol */
 /* Animasi muncul dari kiri pada tombol */
 /* Animasi muncul dari kiri pada tombol */
 @keyframes slideInFromLeft {
-  0% {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
+0% {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+100% {
+  transform: translateX(0);
+  opacity: 1;
+}
 }
 
 .card-gambar button {
-  opacity: 0;
-  transform: translateX(-100%);
-  animation: slideInFromLeft 1s ease-in-out forwards;
-  animation-delay: 1.5s; /* Delay untuk animasi tombol muncul */
+opacity: 0;
+transform: translateX(-100%);
+animation: slideInFromLeft 1s ease-in-out forwards;
+animation-delay: 1.5s; /* Delay untuk animasi tombol muncul */
 }
 
 .card-gambar.active button {
-  opacity: 1;
-  transform: translateX(0);
-  animation: slideInFromLeft 1s ease-in-out forwards;
-  animation-delay: 1.5s; /* Delay untuk animasi tombol muncul */
+opacity: 1;
+transform: translateX(0);
+animation: slideInFromLeft 1s ease-in-out forwards;
+animation-delay: 1.5s; /* Delay untuk animasi tombol muncul */
 }
 
 
@@ -307,150 +315,164 @@
 /*AWAL CARD2 STYLE*/
 
 .card-kedua {
-    background-color: whitesmoke;
-    opacity: 0.8;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 0.25rem;
-    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
-    padding: 1rem;
-    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
-    transform: translateX(0);
-    max-width: 500px;
+  background-color: whitesmoke;
+  opacity: 0.8;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.25rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  padding: 1rem;
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+  transform: translateX(0);
+  max-width: 500px;
 
-    position: relative;
-    top: 250px;
-    left: -10px;
-    overflow: hidden;
+  position: relative;
+  top: 250px;
+  left: -10px;
+  overflow: hidden;
 }
 
 @keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0.5;
-  }
+0% {
+  opacity: 0;
+}
+100% {
+  opacity: 0.5;
+}
 }
 
 .card-kedua{
-  opacity: 0;
-  animation: fadeIn 1s ease-in-out forwards;
-  animation-delay: 0.5s; /* Delay untuk animasi img */
+opacity: 0;
+animation: fadeIn 1s ease-in-out forwards;
+animation-delay: 0.5s; /* Delay untuk animasi img */
 }
 
 .card-kedua.active {
-  animation: none;
-  opacity: 0.6; /* Hentikan animasi setelah gambar muncul */
+animation: none;
+opacity: 0.6; /* Hentikan animasi setelah gambar muncul */
 }
 
 
 @keyframes slideInFromLeft {
-  0% {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
+0% {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+100% {
+  transform: translateX(0);
+  opacity: 1;
+}
 }
 
 .card-kedua h5 {
-  opacity: 0;
-  transform: translateX(-100%);
-  animation: slideInFromLeft 1s ease-in-out forwards;
-  animation-delay: 0.5s; /* Delay untuk animasi h5 */
+opacity: 0;
+transform: translateX(-100%);
+animation: slideInFromLeft 1s ease-in-out forwards;
+animation-delay: 0.5s; /* Delay untuk animasi h5 */
 }
 
 .card-kedua.active h5 {
-  opacity: 1;
-  transform: translateX(0);
-  animation: none; /* Hentikan animasi setelah muncul semua kata */
+opacity: 1;
+transform: translateX(0);
+animation: none; /* Hentikan animasi setelah muncul semua kata */
 }
 
 @keyframes slideInFromRight {
-  0% {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
+0% {
+  transform: translateX(100%);
+  opacity: 0;
+}
+100% {
+  transform: translateX(0);
+  opacity: 1;
+}
 }
 .card-kedua p {
-  opacity: 0;
-  transform: translateX(100%);
-  animation: slideInFromRight 1s ease-in-out forwards;
-  animation-delay: 1s; /* Delay untuk animasi p */
+opacity: 0;
+transform: translateX(100%);
+animation: slideInFromRight 1s ease-in-out forwards;
+animation-delay: 1s; /* Delay untuk animasi p */
 }
 
 .card-kedua.active p {
-  opacity: 1;
-  transform: translateX(0);
-  animation: none; /* Hentikan animasi setelah muncul semua teks */
+opacity: 1;
+transform: translateX(0);
+animation: none; /* Hentikan animasi setelah muncul semua teks */
 }
 
 /* Animasi muncul dari opacity 0 hingga 1 pada img */
 @keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+0% {
+  opacity: 0;
+}
+100% {
+  opacity: 1;
+}
 }
 
 .card-kedua img{
-  opacity: 0;
-  animation: fadeIn 1s ease-in-out forwards;
-  animation-delay: 2s; /* Delay untuk animasi img */
+opacity: 0;
+animation: fadeIn 1s ease-in-out forwards;
+animation-delay: 2s; /* Delay untuk animasi img */
 }
 
 .card-kedua.active img {
-  opacity: 1;
-  animation: none; /* Hentikan animasi setelah gambar muncul */
+opacity: 1;
+animation: none; /* Hentikan animasi setelah gambar muncul */
 }
 
 /* Animasi menghilangkan tombol */
 /* Animasi muncul dari kiri pada tombol */
 /* Animasi muncul dari kiri pada tombol */
 @keyframes slideInFromLeft {
-  0% {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
+0% {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+100% {
+  transform: translateX(0);
+  opacity: 1;
+}
 }
 
 .card-kedua button {
-  opacity: 0;
-  transform: translateX(-100%);
-  animation: slideInFromLeft 1s ease-in-out forwards;
-  animation-delay: 1.5s; /* Delay untuk animasi tombol muncul */
+opacity: 0;
+transform: translateX(-100%);
+animation: slideInFromLeft 1s ease-in-out forwards;
+animation-delay: 1.5s; /* Delay untuk animasi tombol muncul */
 }
 
 .card-kedua.active button {
-  opacity: 1;
-  transform: translateX(0);
-  animation: slideInFromLeft 1s ease-in-out forwards;
-  animation-delay: 1.5s; /* Delay untuk animasi tombol muncul */
+opacity: 1;
+transform: translateX(0);
+animation: slideInFromLeft 1s ease-in-out forwards;
+animation-delay: 1.5s; /* Delay untuk animasi tombol muncul */
 }
+
+/* Aturan CSS untuk membuat tabel responsif pada layar kecil */
+@media (max-width: 768px) {
+  .table-responsive {
+      overflow-x: auto;
+  }
+  .table {
+      width: 100%;
+  }
+  th, td {
+      white-space: nowrap;
+  }
+}
+
 
 /*AKHIR CARD2 STYLE*/
 
 
 .card-container {
-        display: flex;
-        flex-direction: row; /* Membuat elemen berada dalam satu baris */
+      display: flex;
+      flex-direction: row; /* Membuat elemen berada dalam satu baris */
 }
 
 .card {
-    flex: 1; /* Meratakan lebar setiap kartu */
-    margin: 10px; /* Memberikan jarak antara setiap kartu */
-    padding: 10px;
-    border: 1px solid #ccc;
+  flex: 1; /* Meratakan lebar setiap kartu */
+  margin: 10px; /* Memberikan jarak antara setiap kartu */
+  padding: 10px;
+  border: 1px solid #ccc;
 }

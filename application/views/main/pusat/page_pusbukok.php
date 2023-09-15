@@ -4,7 +4,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col pt-4 pb-4">
-                        <p style="font-size:35px; color: #3c3d3d;">Pusat Studi Gender Dan Anak</p>
+                        <p style="font-size:25px; color: #3c3d3d;">Pusat Studi Gender Dan Anak</p>
                         <p style="color: #9fa0a0; margin-top: -12px;">LPPM UNUSIA > Pusat > PSGA</p>
 
                     </div>

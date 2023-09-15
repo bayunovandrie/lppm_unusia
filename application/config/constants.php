@@ -13,7 +13,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 defined('SHOW_DEBUG_BACKTRACE') OR define('SHOW_DEBUG_BACKTRACE', TRUE);
 
-define('BASEURL', 'http://localhost/CI3_admin/');
+define('BASEURL', 'http://localhost/lppm_unusia_wp/');
 
 /*
 |--------------------------------------------------------------------------

@@ -40,40 +40,43 @@
                     <h5 style="color:#3c3d3d;">Daftar Penelitian Mandiri</h5>
                 </div>
                 <div class="card-body">
-                    <table id="example" class="table table-bordered table-striped">
-                        <thead>
-                            <tr>
-                                <th>No</th>
-                                <th>Nama Penerbit</th>
-                                <th>Judul Penelitian</th>
-                                <th>Tahun</th>
-                                <th>Download</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php
+                    <div class="table-responsive">
+                        <table id="example" class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>Nama Penerbit</th>
+                                    <th>Judul Penelitian</th>
+                                    <th>Tahun</th>
+                                    <th>Download</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
                             $no = 1;
                             foreach ($penelitian->result_array() as $n) {
                                 ?>
-                            <tr class="gradeA">
-                                <td align="center" style="text-align: center; vertical-align: middle;">
-                                    <?php echo $no++; ?></td>
-                                <td align="center" style="text-align: center; vertical-align: middle;">
-                                    <?= $n['penelitian_nama'] ?></td>
-                                <td align="center" style="text-align: center; vertical-align: middle;">
-                                    <?= $n['penelitian_judul'] ?></td>
-                                <td align="center" style="text-align: center; vertical-align: middle;">
-                                    <?= $n['tahun'] ?></td>
-                                <td align="center" style="text-align: center; vertical-align: middle;">
-                                    <a href="http://localhost/CI3_admin/storage/riset/<?php echo $n['penelitian_file_name'] ?>"
-                                        download>Download File</a>
-                                </td>
+                                <tr class="gradeA">
+                                    <td align="center" style="text-align: center; vertical-align: middle;">
+                                        <?php echo $no++; ?></td>
+                                    <td align="center" style="text-align: center; vertical-align: middle;">
+                                        <?= $n['penelitian_nama'] ?></td>
+                                    <td align="center" style="text-align: center; vertical-align: middle;">
+                                        <?= $n['penelitian_judul'] ?></td>
+                                    <td align="center" style="text-align: center; vertical-align: middle;">
+                                        <?= $n['tahun'] ?></td>
+                                    <td align="center" style="text-align: center; vertical-align: middle;">
+                                        <a href="http://localhost/CI3_admin/storage/riset/<?php echo $n['penelitian_file_name'] ?>"
+                                            download>Download File</a>
+                                    </td>
 
 
-                            </tr>
-                            <?php } ?>
-                        </tbody>
-                    </table>
+                                </tr>
+                                <?php } ?>
+                            </tbody>
+                        </table>
+                    </div>
+
                 </div>
             </div>
             <br>
@@ -83,3 +86,22 @@
         </div>
     </section>
 </main>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+
+<script>
+$(document).ready(function() {
+    $('#example').DataTable();
+});
+$(document).ready(function() {
+    $('#cardTable').DataTable({
+        searching: true, // Aktifkan fitur pencarian
+        paging: true, // Aktifkan fitur penomoran halaman
+        columnDefs: [{
+            targets: 0,
+            orderable: false // Matikan pengurutan untuk kolom pertama yang berisi gambar
+        }]
+    });
+});
+</script>
