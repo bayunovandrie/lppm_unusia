@@ -122,7 +122,8 @@
                             </a>
                         </li>
                         <li class="social-icon-item">
-                            <a href="#" class="social-icon-link button button--skoll">
+                            <a href="https://www.youtube.com/@lppmunusia1529" target="_blank"
+                                class="social-icon-link button button--skoll">
                                 <span></span>
                                 <span class="bi-youtube"></span>
                             </a>
@@ -157,11 +158,12 @@
 <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script> -->
 
-
 <!-- Tautan ke skrip JavaScript DataTables -->
 
-<script src="<?= BASEURL ?>assets/js/jquery.min.js"></script>
-<script src="<?= BASEURL ?>assets/js/bootstrap.min.js"></script>
+<script src="<?= BASEURL ?>assets/js/jquery.min.js">
+< /> <
+script src = "<?= BASEURL ?>assets/js/bootstrap.min.js" >
+</script>
 <script src="<?= BASEURL ?>assets/js/jquery.backstretch.min.js"></script>
 <script src="<?= BASEURL ?>assets/js/counter.js"></script>
 <script src="<?= BASEURL ?>assets/js/countdown.js"></script>
@@ -169,6 +171,27 @@
 <script src="<?= BASEURL ?>assets/js/modernizr.js"></script>
 <script src="<?= BASEURL ?>assets/js/animated-headline.js"></script>
 <script src="<?= BASEURL ?>assets/js/custom.js"></script>
+
+<!-- Tambahkan link ke jQuery dan DataTables JavaScript -->
+<script src="<?= BASEURL ?>assets/js/jquery.min.js"></script>
+<script src="<?= BASEURL ?>assets/DataTables/dataTables.min.js"></script>
+
+
+<script>
+$(document).ready(function() {
+    $('#example').DataTable();
+});
+$(document).ready(function() {
+    $('#cardTable').DataTable({
+        searching: true, // Aktifkan fitur pencarian
+        paging: true, // Aktifkan fitur penomoran halaman
+        columnDefs: [{
+            targets: 0,
+            orderable: false // Matikan pengurutan untuk kolom pertama yang berisi gambar
+        }]
+    });
+});
+</script>
 
 </body>
 

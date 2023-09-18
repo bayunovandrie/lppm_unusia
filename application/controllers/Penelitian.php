@@ -12,7 +12,16 @@ class Penelitian extends CI_Controller {
 		$data['title'] = 'Penelitian Internal - LPPM UNUSIA';
 
 		$data['tahun'] = $this->db->query("SELECT * FROM Tahun");
-		$data['penelitian'] = $this->db->query("SELECT * FROM penelitian LEFT JOIN tahun ON penelitian.penelitian_year = tahun.TahunID WHERE peneletian_type = '1' ");
+
+		$tahun = $this->input->post('tahun');
+
+		if( isset($tahun) ) {
+			$sql = " AND penelitian_year = '$tahun' ";
+		} else {
+			$sql = " ";
+		}
+
+		$data['penelitian'] = $this->db->query("SELECT * FROM penelitian LEFT JOIN tahun ON penelitian.penelitian_year = tahun.TahunID WHERE peneletian_type = '1' $sql ");
 
 		$this->load->view('main/header', $data);
 		$this->load->view('main/topbar');
@@ -24,7 +33,16 @@ class Penelitian extends CI_Controller {
 	{
 		$data['title'] = 'Penelitian Eksternal - LPPM UNUSIA';
 		$data['tahun'] = $this->db->query("SELECT * FROM Tahun");
-		$data['penelitian'] = $this->db->query("SELECT * FROM penelitian LEFT JOIN tahun ON penelitian.penelitian_year = tahun.TahunID WHERE peneletian_type = '2' ");
+
+		$tahun = $this->input->post('tahun');
+
+		if( isset($tahun) ) {
+			$sql = " AND penelitian_year = '$tahun' ";
+		} else {
+			$sql = " ";
+		}
+		
+		$data['penelitian'] = $this->db->query("SELECT * FROM penelitian LEFT JOIN tahun ON penelitian.penelitian_year = tahun.TahunID WHERE peneletian_type = '2' $sql ");
 
 		$this->load->view('main/header', $data);
 		$this->load->view('main/topbar');
@@ -36,7 +54,16 @@ class Penelitian extends CI_Controller {
 	{
 		$data['title'] = 'Penelitian Mandiri - LPPM UNUSIA';
 		$data['tahun'] = $this->db->query("SELECT * FROM Tahun");
-		$data['penelitian'] = $this->db->query("SELECT * FROM penelitian LEFT JOIN tahun ON penelitian.penelitian_year = tahun.TahunID WHERE peneletian_type = '3' ");
+
+		$tahun = $this->input->post('tahun');
+
+		if( isset($tahun) ) {
+			$sql = " AND penelitian_year = '$tahun' ";
+		} else {
+			$sql = " ";
+		}
+
+		$data['penelitian'] = $this->db->query("SELECT * FROM penelitian LEFT JOIN tahun ON penelitian.penelitian_year = tahun.TahunID WHERE peneletian_type = '3' $sql ");
 
 		$this->load->view('main/header', $data);
 		$this->load->view('main/topbar');

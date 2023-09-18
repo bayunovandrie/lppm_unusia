@@ -15,7 +15,7 @@
 
     <section>
         <div class="container mt-5 mb-5" style="box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);">
-            <form action="" method="" class="form-group">
+            <form action="<?= BASEURL ?>penelitian-eksternal" method="post" class="form-group">
 
                 <div class="row">
                     <div class="col-md-2 form-group mt-4">
@@ -41,7 +41,7 @@
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
-                        <table id="example" class="table table-bordered table-striped">
+                        <table id="cardTable" class="table table-bordered table-striped">
                             <thead>
                                 <tr>
                                     <th>No</th>
@@ -66,7 +66,7 @@
                                     <td align="center" style="text-align: center; vertical-align: middle;">
                                         <?= $n['tahun'] ?></td>
                                     <td align="center" style="text-align: center; vertical-align: middle;">
-                                        <a href="http://localhost/CI3_admin/storage/riset/<?php echo $n['penelitian_file_name'] ?>"
+                                        <a href="<?= BASEURL ?>storage/riset/<?php echo $n['penelitian_file_name'] ?>"
                                             download>Download File</a>
                                     </td>
 
@@ -86,22 +86,3 @@
         </div>
     </section>
 </main>
-
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
-
-<script>
-$(document).ready(function() {
-    $('#example').DataTable();
-});
-$(document).ready(function() {
-    $('#cardTable').DataTable({
-        searching: true, // Aktifkan fitur pencarian
-        paging: true, // Aktifkan fitur penomoran halaman
-        columnDefs: [{
-            targets: 0,
-            orderable: false // Matikan pengurutan untuk kolom pertama yang berisi gambar
-        }]
-    });
-});
-</script>

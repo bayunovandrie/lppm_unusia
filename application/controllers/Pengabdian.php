@@ -13,7 +13,16 @@ class Pengabdian extends CI_Controller {
 		$data['title'] = 'Pengabdian Internal - LPPM UNUSIA';
 
 		$data['tahun'] = $this->db->query("SELECT * FROM Tahun");
-		$data['pengabdian'] = $this->db->query("SELECT * FROM pengabdian LEFT JOIN Tahun ON pengabdian.pengabdian_tahun = Tahun.TahunID WHERE pengabdian_tipe = '1' ");
+
+		$tahun = $this->input->post('tahun');
+
+		if( isset($tahun) ) {
+			$sql = " AND pengabdian_tahun = '$tahun' ";
+		} else {
+			$sql = " ";
+		}
+
+		$data['pengabdian'] = $this->db->query("SELECT * FROM pengabdian LEFT JOIN Tahun ON pengabdian.pengabdian_tahun = Tahun.TahunID WHERE pengabdian_tipe = '1' $sql  ");
 
 		$this->load->view('main/header', $data);
 		$this->load->view('main/topbar');
@@ -25,7 +34,16 @@ class Pengabdian extends CI_Controller {
 	{
 		$data['title'] = 'Pengabdian Eksternal - LPPM UNUSIA';
 		$data['tahun'] = $this->db->query("SELECT * FROM Tahun");
-		$data['pengabdian'] = $this->db->query("SELECT * FROM pengabdian LEFT JOIN Tahun ON pengabdian.pengabdian_tahun = Tahun.TahunID WHERE pengabdian_tipe = '2' ");
+
+		$tahun = $this->input->post('tahun');
+
+		if( isset($tahun) ) {
+			$sql = " AND pengabdian_tahun = '$tahun' ";
+		} else {
+			$sql = " ";
+		}
+
+		$data['pengabdian'] = $this->db->query("SELECT * FROM pengabdian LEFT JOIN Tahun ON pengabdian.pengabdian_tahun = Tahun.TahunID WHERE pengabdian_tipe = '2' $sql ");
 
 		$this->load->view('main/header', $data);
 		$this->load->view('main/topbar');
@@ -36,7 +54,16 @@ class Pengabdian extends CI_Controller {
 	{
 		$data['title'] = 'KKN - LPPM UNUSIA';
 		$data['tahun'] = $this->db->query("SELECT * FROM Tahun");
-		$data['pengabdian'] = $this->db->query("SELECT * FROM pengabdian LEFT JOIN Tahun ON pengabdian.pengabdian_tahun = Tahun.TahunID WHERE pengabdian_tipe = '3' ");
+
+		$tahun = $this->input->post('tahun');
+
+		if( isset($tahun) ) {
+			$sql = " AND pengabdian_tahun = '$tahun' ";
+		} else {
+			$sql = " ";
+		}
+
+		$data['pengabdian'] = $this->db->query("SELECT * FROM pengabdian LEFT JOIN Tahun ON pengabdian.pengabdian_tahun = Tahun.TahunID WHERE pengabdian_tipe = '3' $sql ");
 
 		$this->load->view('main/header', $data);
 		$this->load->view('main/topbar');
@@ -48,7 +75,16 @@ class Pengabdian extends CI_Controller {
 	{
 		$data['title'] = 'Mandiri - LPPM UNUSIA';
 		$data['tahun'] = $this->db->query("SELECT * FROM Tahun");
-		$data['pengabdian'] = $this->db->query("SELECT * FROM pengabdian LEFT JOIN Tahun ON pengabdian.pengabdian_tahun = Tahun.TahunID WHERE pengabdian_tipe = '4' ");
+
+		$tahun = $this->input->post('tahun');
+
+		if( isset($tahun) ) {
+			$sql = " AND pengabdian_tahun = '$tahun' ";
+		} else {
+			$sql = " ";
+		}
+
+		$data['pengabdian'] = $this->db->query("SELECT * FROM pengabdian LEFT JOIN Tahun ON pengabdian.pengabdian_tahun = Tahun.TahunID WHERE pengabdian_tipe = '4' $sql ");
 
 		$this->load->view('main/header', $data);
 		$this->load->view('main/topbar');

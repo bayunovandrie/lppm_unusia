@@ -191,7 +191,7 @@
                </div>
                <div class="row">
                    <div class="col-md-4 mb-5">
-                       <iframe width="640" height="360" src="https://www.youtube.com/embed/tvqmJu4umuc" frameborder="0">
+                       <iframe width="540" height="360" src="https://www.youtube.com/embed/tvqmJu4umuc" frameborder="0">
                        </iframe>
                    </div>
                </div>

@@ -15,7 +15,7 @@
 
     <section>
         <div class="container mt-5 mb-5" style="box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);">
-            <form action="" method="" class="form-group">
+            <form action="<?= BASEURL ?>penelitian-internal" method="post" class="form-group">
 
                 <div class="row">
                     <div class="col-md-2 form-group mt-4">
@@ -66,7 +66,7 @@
                                     <td align="center" style="text-align: center; vertical-align: middle;">
                                         <?= $n['tahun'] ?></td>
                                     <td align="center" style="text-align: center; vertical-align: middle;">
-                                        <a href="http://localhost/CI3_admin/storage/riset/<?php echo $n['penelitian_file_name'] ?>"
+                                        <a href="<?= BASEURL ?>storage/riset/<?php echo $n['penelitian_file_name'] ?>"
                                             download>Download File</a>
                                     </td>
 
