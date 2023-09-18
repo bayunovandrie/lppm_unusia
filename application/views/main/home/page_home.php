@@ -11,7 +11,7 @@
                                <button class="btn btn-success">Learn More</button>
                            </div>
                            <div class="col-md-6 img-gambar">
-                               <img src="http://localhost/CI3/assets/images/logo-title-lppm.png" alt="">
+                               <img src="<?= BASEURL ?>assets/images/logo-title-lppm.png" alt="">
                            </div>
                        </div>
                    </div>
@@ -30,7 +30,7 @@
                                <button class="btn btn-success">Learn More</button>
                            </div>
                            <div class="col-md-6">
-                               <img src="http://localhost/CI3/assets/images/logo-title-lppm.png" alt="">
+                               <img src="<?= BASEURL ?>assets/images/logo-title-lppm.png" alt="">
                            </div>
                        </div>
                    </div>
@@ -115,7 +115,7 @@
 
                        <div class="col-md-4">
                            <div class="card rounded-card" style="width: 18rem;">
-                               <img src="http://localhost/CI3_admin/assets2/images/article/<?= $value['article_img'] ?>"
+                               <img src="<?= BASEURL ?>assets2/images/article/<?= $value['article_img'] ?>"
                                    class="card-img-top" alt="...">
                                <div class="card-body">
                                    <a href="<?= BASEURL ?>Article/baca?id=<?= $value['article_id'] ?>"
@@ -150,7 +150,7 @@
                        <?php foreach ($artikel_opini->result_array() as $value) {?>
                        <div class="col-md-4">
                            <div class="card rounded-card" style="width: 18rem;">
-                               <img src="http://localhost/CI3_admin/assets2/images/article/<?= $value['article_img'] ?>"
+                               <img src="<?= BASEURL ?>assets2/images/article/<?= $value['article_img'] ?>"
                                    class="card-img-top">
                                <div class="card-body">
                                    <a href="<?= BASEURL ?>Article/baca?id=<?= $value['article_id'] ?>"
@@ -207,9 +207,9 @@
 const gambarContainer = document.getElementById('gambar-container');
 const gantiGambarButton = document.getElementById('ganti-gambar');
 const daftarGambar = [
-    'http://localhost/CI3/assets/images/pengabdian/pengabdian-3.jpg',
-    'http://localhost/CI3/assets/images/pengabdian/pengabdian-4.jpg',
-    'http://localhost/CI3/assets/images/pengabdian/pengabdian-5.jpg'
+    '<?= BASEURL ?>assets/images/pengabdian/pengabdian-3.jpg',
+    '<?= BASEURL ?>assets/images/pengabdian/pengabdian-4.jpg',
+    '<?= BASEURL ?>assets/images/pengabdian/pengabdian-5.jpg'
 ]; // Ganti dengan nama gambar yang sesuai
 
 let indeksGambar = 0;

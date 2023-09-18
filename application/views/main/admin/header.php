@@ -19,17 +19,17 @@
     <link href="<?= BASEURL ?>assets2/dist/css/style.min.css" rel="stylesheet">
     <link href="<?= BASEURL ?>assets2/dist/css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?= BASEURL ?>assets/DataTables/dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="<?= BASEURL ?>assets/css/bootstrap.min.css">
 
     <!-- summernote -->
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
 
     <style>
-        .bordered-image {
-            border: 2px solid #000;
-            display: inline-block;
-        }
+    .bordered-image {
+        border: 2px solid #000;
+        display: inline-block;
+    }
     </style>
 
 </head>
@@ -50,7 +50,8 @@
                         <a href="<?= BASEURL ?>admin/Home" class="logo">
                             <span class="logo-text">
                                 <!-- dark Logo text -->
-                                <img src="<?= BASEURL ?>assets/images/logo-lppm-unusia.png" class="dark-logo" width="150">
+                                <img src="<?= BASEURL ?>assets/images/logo-lppm-unusia.png" class="dark-logo"
+                                    width="150">
                             </span>
                         </a>
                     </div>
@@ -84,7 +85,8 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle waves-effect waves-dark pro-pic" href=""
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <img src="<?= BASEURL ?>assets2/images/user-logo.png" alt="user" class="rounded-circle" width="40">
+                                <img src="<?= BASEURL ?>assets2/images/user-logo.png" alt="user" class="rounded-circle"
+                                    width="40">
                                 <span class="m-l-5 font-medium d-none d-sm-inline-block"><?php echo $username; ?><i
                                         class="mdi mdi-chevron-down"></i></span>
                             </a>
@@ -94,8 +96,8 @@
                                 </span>
                                 <div class="d-flex no-block align-items-center p-15 bg-primary text-white m-b-10">
                                     <div class="">
-                                        <img src="<?= BASEURL ?>assets2/images/user-logo-removebg.png" alt="user" class="rounded-circle"
-                                            width="60">
+                                        <img src="<?= BASEURL ?>assets2/images/user-logo-removebg.png" alt="user"
+                                            class="rounded-circle" width="60">
                                     </div>
                                     <div class="m-l-10">
                                         <h4 class="m-b-0">Admin</h4>
@@ -104,7 +106,7 @@
                                 <a class="dropdown-item" href="<?= BASEURL ?>admin/auth/logout">
                                     <i class="fa fa-power-off m-r-5 m-l-5"></i>Logout</a>
                                 <div class="dropdown-divider"></div>
-                                
+
                             </div>
                         </li>
                         <!-- ============================================================== -->
